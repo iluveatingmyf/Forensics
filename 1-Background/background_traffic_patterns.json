@@ -1,0 +1,64 @@
+{
+    "192.168.0.192": {
+        "Cluster_0": {
+            "unique_packet_patterns": [
+                [
+                    178
+                ]
+            ],
+            "average_period_time": 9.971254666646322,
+            "std_period_time": 0.004879740182662832,
+            "elastic_time_window": [
+                9.96637492646366,
+                9.976134406828985
+            ]
+        },
+        "Cluster_1": {
+            "unique_packet_patterns": [
+                [
+                    -86,
+                    56,
+                    86
+                ]
+            ],
+            "average_period_time": 14.956926472046796,
+            "std_period_time": 0.01045441317694067,
+            "elastic_time_window": [
+                14.946472058869855,
+                14.967380885223736
+            ]
+        }
+    },
+    "224.0.0.50": {
+        "Cluster_0": {
+            "unique_packet_patterns": [
+                [
+                    178
+                ]
+            ],
+            "average_period_time": 9.971254666646322,
+            "std_period_time": 0.004879740182662832,
+            "elastic_time_window": [
+                9.96637492646366,
+                9.976134406828985
+            ]
+        }
+    },
+    "118.26.252.223": {
+        "Cluster_0": {
+            "unique_packet_patterns": [
+                [
+                    -86,
+                    56,
+                    86
+                ]
+            ],
+            "average_period_time": 14.956926472046796,
+            "std_period_time": 0.01045441317694067,
+            "elastic_time_window": [
+                14.946472058869855,
+                14.967380885223736
+            ]
+        }
+    }
+}
