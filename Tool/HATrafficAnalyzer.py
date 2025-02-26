@@ -34,12 +34,13 @@ class HATrafficAnalyzer:
 
     def _get_consecutive_flows(self, flows: List[Dict]) -> List[List[Dict]]:
         """
-        将flows分组为连续的序列（基于时间和设备）
-        返回连续flow序列的列表
-        """
+        将flows分组为连续的序列（基于设备对、协议和时间连续性）
+        返回格式：[[flow1, flow2, flow3], [flow4, flow5], ...]"""
+        
         if not flows:
             return []
         
+        event_list = []
         consecutive_groups = []
         current_group = [flows[0]]
         
@@ -89,7 +90,6 @@ class HATrafficAnalyzer:
 
         # 获取所有连续的flow组
         consecutive_groups = self._get_consecutive_flows(flows)
-        print(consecutive_groups[0])
 
         i = 0
         while i < len(flows):

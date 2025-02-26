@@ -58,6 +58,7 @@ def frequent(flows, frequency_threshold=5):
     for flow in periodic_flows:
         print(f"Flow Key: {flow['flow_key']} | Packet Count: {len(flow['segments'])} | Start Time: {datetime.fromtimestamp(flow['start_time'])} | End Time: {datetime.fromtimestamp(flow['end_time'])}")
 
+
 def filter_protocol(pcap_path, output_path):
     # 读取pcap文件并过滤非TCP/UDP的包
     packets = rdpcap(pcap_path)
@@ -72,6 +73,7 @@ def filter_protocol(pcap_path, output_path):
     # 保存过滤后的数据包到新的PCAP文件
     wrpcap(output_path, filtered)
     print(f"Filtered packets saved to {output_path}")
+
 
 def filter_specific_ips(pcap_path, output_path, specific_ips):
     """
@@ -109,4 +111,4 @@ flow_gen = FlowGenerator(cap)
 flow_gen.generate_flows()
 flows = flow_gen.get_flows()
 
-frequent(flows)
+#frequent(flows)

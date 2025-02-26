@@ -60,10 +60,15 @@ class FlowGenerator:
             'start_time': timestamp,
             'end_time': timestamp,
             'initiator': packet.ip.src,
-            'responder': packet.ip.dst
+            'responder': packet.ip.dst,
+            'device_pair': sorted([src_ip, dst_ip]),
+            'proto': protocol,
+            'duration': end_time - start_time,
+            'port_pairs': {(src_port, dst_port)},  # 使用集合记录所有端口组合
         }
 
     def update_flow(self, flow, packet, timestamp):
+        flow['port_pairs'].add((packet.src_port, packet.dst_port))
         flow['segments'].append(self.create_segment(packet, timestamp))
         flow['end_time'] = timestamp  # Update end time to last packet time
 

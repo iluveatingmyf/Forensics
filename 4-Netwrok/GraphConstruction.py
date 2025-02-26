@@ -72,7 +72,7 @@ def generate_provenance_graph(flows):
     print(f"Total edges created: {node_versioner.total_created_edges}")
     print(f"Edges skipped due to redundancy: {node_versioner.skipped_edges}")
 
-cap = pyshark.FileCapture("../TrafficDataset/test/ha_test_filtered.pcap")
+cap = pyshark.FileCapture("./test.pcap")
 flow_gen = FlowGenerator(cap)
 flow_gen.generate_flows()
 flows = flow_gen.get_flows()
