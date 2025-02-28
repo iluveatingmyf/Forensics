@@ -1,0 +1,13 @@
+{
+    "domain": "fake_events",
+    "name": "Fake Event Trigger",
+    "config_flow": false,
+    "iot_class": "local_polling",
+    "documentation": "https://www.example.com",
+    "requirements": [],
+    "dependencies": [],
+    "codeowners": [
+        "@iluveatingmyf"
+    ],
+    "version": "1.0.0"
+}

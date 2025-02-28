@@ -100,8 +100,8 @@ def filter_specific_ips(pcap_path, output_path, specific_ips):
     print(f"Filtered packets saved to {output_path}")
 
 # 输入和输出PCAP路径
-pcap_path = "../TrafficDataset/test/ha_test.pcap"
-output_path = "../TrafficDataset/test/ha_test_protocol.pcap"
+pcap_path = "../TrafficDataset/Dos/dosHA.pcap"
+output_path = "../TrafficDataset/test/dosHA.pcap"
 filter_protocol(pcap_path, output_path)
 specific_ips = ["192.168.0.192", "192.168.0.176"]  # 需要过滤的IP列表
 filter_specific_ips(output_path, output_path, specific_ips)

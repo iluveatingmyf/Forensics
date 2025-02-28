@@ -63,8 +63,8 @@ def merge_pcap_files(output_file, input_files):
     wrpcap(output_file, merged_packets)
 
 
-HAfile_path= "../TrafficDataset/test/ha_test_filtered.pcap"
-Rfile_path = "../TrafficDataset/test/test.pcap"
+HAfile_path= "../TrafficDataset/Dos/dos.pcap"
+Rfile_path = "../TrafficDataset/Dos/dosHA.pcap"
 """
 HAfile_path_new= "./mimicHA_bak.pcap"
 Rfile_path_new = "./mimic_bak.pcap"
@@ -76,7 +76,7 @@ HAfile = FilterProtocol(HAfile)
 Rfile = FilterProtocol(Rfile_path)"""
 
 
-output_file = "test.pcap"
+output_file = "../TrafficDataset/Dos/merged.pcap"
 
 
 input_files=[HAfile_path, Rfile_path]
